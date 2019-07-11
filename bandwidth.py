@@ -22,10 +22,10 @@ def get_bandwidth(mu,nc):
 
 
 if __name__ == "__main__":
-        mu = int(input("Enter numerology "))
-        while not(0 <= mu <= 5):
-                mu = int(input("Enter numerology (int between 0 and 5) "))
-        nc = int(input("Enter N Carrier Aggregation "))
-        while not(1 <= nc <= 16):
-                mu = int(input("Enter numerology (int between 1 and 16) "))
-        print("The bandwidth is ",get_bandwidth(mu,nc)," MHz")
+    mu = int(input("Enter numerology "))
+    while not(0 <= mu <= 5):
+            mu = int(input("Enter numerology (int between 0 and 5) "))
+    nc = int(input("Enter N Carrier Aggregation "))
+    while not(1 <= nc <= 16):
+            mu = int(input("Enter numerology (int between 1 and 16) "))
+    print("The bandwidth is ",get_bandwidth(mu,nc)," MHz")

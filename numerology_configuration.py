@@ -38,7 +38,7 @@ def get_numerology_configuration(mu):
 
 
 if __name__ == "__main__":
-        mu = int(input("Enter numerology "))
-        while not(0 <= mu <= 5):
-                mu = int(input("Enter numerology (int between 0 and 5) "))
-        print(get_numerology_configuration(mu))
+    mu = int(input("Enter numerology "))
+    while not(0 <= mu <= 5):
+        mu = int(input("Enter numerology (int between 0 and 5) "))
+    print(get_numerology_configuration(mu))

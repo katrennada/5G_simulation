@@ -38,20 +38,20 @@ def get_throughput(mu,nc,mimo,modulation):
 
 
 if __name__ == "__main__":
-        mu = int(input("Enter numerology "))
-        while not(0 <= mu <= 5):
-                mu = int(input("Enter numerology (int between 0 and 5) "))
+    mu = int(input("Enter numerology "))
+    while not(0 <= mu <= 5):
+        mu = int(input("Enter numerology (int between 0 and 5) "))
 
-        nc = int(input("Enter N Carrier Aggregation "))
-        while not(1 <= nc <= 16):
-                mu = int(input("Enter numerology (int between 1 and 16) "))
+    nc = int(input("Enter N Carrier Aggregation "))
+    while not(1 <= nc <= 16):
+        mu = int(input("Enter numerology (int between 1 and 16) "))
 
+    mimo = int(input("Enter MIMO configuration "))
+    while not((mimo==2) or (mimo==4) or (mimo==8) or (mimo==24)):
         mimo = int(input("Enter MIMO configuration "))
-        while not((mimo==2) or (mimo==4) or (mimo==8) or (mimo==24)):
-            mimo = int(input("Enter MIMO configuration "))
 
+    modulation = input("Enter modulation ")
+    while not((modulation=="BPSK") or (modulation=="QPSK") or (modulation=="16QAM") or (modulation=="64QAM") or (modulation=="256QAM")):
         modulation = input("Enter modulation ")
-        while not((modulation=="BPSK") or (modulation=="QPSK") or (modulation=="16QAM") or (modulation=="64QAM") or (modulation=="256QAM")):
-            modulation = input("Enter modulation ")
 
-        print("The theoretical throughput is ",get_throughput(mu,nc,mimo,modulation)," Gbps")
+    print("The theoretical throughput is ",get_throughput(mu,nc,mimo,modulation)," Gbps")
