@@ -55,7 +55,7 @@ if __name__ == "__main__":
     pl1= get_path_loss_fi_model(alpha1,beta1,sigma1)
     fspl= get_free_space_path_loss(d,f)
 
-    plt.plot(d,fspl,label="Free space path loss")
+    plt.semilogx(d,fspl,label="Free space path loss")
     plt.plot(d,pl,label="LOS")
     plt.plot(d,pl1, label="NLOS")
     plt.title("Path loss = f(d)")
