@@ -20,7 +20,7 @@ def get_path_loss_fi_model(alpha,beta,sigma):
     path_loss : Omnidirectional Path loss in dB
     """
     #ksi variable aléatoire suit une loi normale de moyenne 0 et variance sigma^2
-    ksi = (sigma**2)*npm.randn(1)
+    ksi = np.random.normal(0, sigma**2)
     #Omnidirectiona path loss in dB
     path_loss= alpha+10*beta*np.log10(d)+float(ksi)
     return(path_loss)
