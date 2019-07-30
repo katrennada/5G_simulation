@@ -20,7 +20,10 @@ def get_path_loss_fi_model(alpha,beta,sigma):
     path_loss : Omnidirectional Path loss in dB
     """
     #ksi variable aléatoire suit une loi normale de moyenne 0 et variance sigma^2
-    ksi = np.random.normal(0, sigma**2)
+    #ksi = np.random.normal(0, sigma**2)
+    mu = 0
+    x = np.random.randn(10000) * sigma + mu
+    ksi = np.mean(x)
     #Omnidirectiona path loss in dB
     path_loss= alpha+10*beta*np.log10(d)+float(ksi)
     return(path_loss)
@@ -50,12 +53,12 @@ if __name__ == "__main__":
     beta1 = float(input("Enter beta1 "))
     sigma1 = float(input("Enter sigma1 "))
 
-    d = np.linspace(30,200,10000)
+    d = np.linspace(30,200,100)
     pl= get_path_loss_fi_model(alpha,beta,sigma)
     pl1= get_path_loss_fi_model(alpha1,beta1,sigma1)
     fspl= get_free_space_path_loss(d,f)
 
-    plt.semilogx(d,fspl,label="Free space path loss")
+    plt.semilogx(d,fspl,"^",label="Free space path loss")
     plt.plot(d,pl,label="LOS")
     plt.plot(d,pl1, label="NLOS")
     plt.title("Path loss = f(d)")
