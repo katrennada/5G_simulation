@@ -31,9 +31,9 @@ def get_link_state_probability(aout,bout,alos):
 
 
 if __name__ == "__main__":
-    aout = float(input("Enter a_out "))
-    bout = float(input("Enter b_out "))
-    alos = float(input("Enter a_los "))
+    aout = float (1/30)
+    bout = 5.2
+    alos = float(1/67.1)
 
 
     d = np.linspace(0,400,10000)
