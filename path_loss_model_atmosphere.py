@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
     plt.semilogx(d,fspl,"^",label="Free space path loss")
     plt.plot(d,pl_fi,label="FI model")
-    plt.plot(d,pl_atm, label="atm model")
+    plt.plot(d,pl_atm, label="atmospheric attenuation model")
     plt.title("Path loss = f(d)")
     plt.legend()
     plt.xlabel("Distance (m)")
